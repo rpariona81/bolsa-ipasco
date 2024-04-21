@@ -103,7 +103,7 @@ class OfferJobEloquent extends BaseModel
 
     public static function getCantOffersjobs()
     {
-        return OfferJobEloquent::where('status',1)->count();
+        return OfferJobEloquent::where('status',1)->whereDate('t_offersjob.date_vigency', '>=', Carbon::now())->count();
     }
 
     public static function getOffersjobs()

@@ -1,2 +1,2 @@
-# bolsa-irrp
-Bolsa laboral actualizada IES RRP
+# bolsa-ipasco
+Bolsa laboral actualizada IDEX PASCO

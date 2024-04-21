@@ -1,5 +1,5 @@
 <!--https://www.codeply.com/p/t6GGNuV2yb-->
-<div class="row">
+<div class="row mb-5">
     <div class="col-12">
         <div class="card border shadow-xs mb-4">
             <div class="card-header border-bottom pb-2">
@@ -24,7 +24,7 @@
                             <div class="col-md-6 col-lg-6 mb-4">
                                 <div class="card border border-1 p-1" style="min-height:340px; max-height:340px;">
                                     <div class="card-header">
-                                        <h6><?= $item->title ?></h6>
+                                        <h6><strong><?= $item->title ?></strong></h6>
                                         <h6>
                                             <font color="red"><em><?= $item->employer ?></em></font>
                                         </h6>
@@ -72,7 +72,7 @@
                             <div class="col-md-6 col-lg-6 mb-4">
                                 <div class="card border border-1 p-1" style="min-height:340px; max-height:340px;">
                                     <div class="card-header border-bottom pb-2">
-                                        <h6><?= $item->title ?></h6>
+                                        <h6><strong><?= $item->title ?></strong></h6>
                                         <h6>
                                             <font color="red"><em><?= $item->employer ?></em></font>
                                         </h6>

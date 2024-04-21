@@ -83,24 +83,35 @@
         <!---- RESUMEN DE ESTUDIANTES POR PROGRAMA DE ESTUDIOS --->
         <div class="row">
             <div class="col-12 col-lg-6 col-xl-6 d-flex">
-                <div class="card flex-fill w-100 mb-4">
+                <div class="card flex-fill w-100">
                     <div class="card-header bg-light">
                         <h4 class="card-title text-dark">Estudiantes/Egresados por programas de estudios</h4>
                     </div>
-                    <div class="card-body">
+                    <!--<div class="card-body">-->
 
                         <?php foreach ($cantUsersByCareer as $item) : ?>
                             <!-- <div class="wrapper container"> -->
-                            <div class="d-flex justify-content-between">
+                            <!--<div class="d-flex justify-content-between">
                                 <h5 class="mb-2"><?= $item->career_title ?></h5>
                                 <p class="mb-2 text-primary display-6"><?= ($item->cant_Users) ? $item->cant_Users : 0 ?></p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="height:50px; width:<?= ($item->cant_Users / $cantEstudEgres) * 100 + 25 ?>%" aria-valuenow="<?= ($item->cant_Users / $cantEstudEgres) ?>" aria-valuemin="0" aria-valuemax="<?= $cantEstudEgres ?>"></div>
-                            </div>
+                            </div>-->
                             <!--</div>--><br>
+                            <ul class="list-group list-group-flush">
+
+                                <li class="list-group-item px-4 pb-4">
+                                    <p class="mb-2 font-weight-bold"><strong class="text-primary"><?= $item->career_title ?></strong>
+                                    <strong class="float-end text-secondary"><?= ($item->cant_Users) ? $item->cant_Users : 0 ?></strong></p>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="height:50px; width:<?= ($item->cant_Users / $cantEstudEgres) * 100 + 25 ?>%" aria-valuenow="<?= ($item->cant_Users / $cantEstudEgres) ?>" aria-valuemin="0" aria-valuemax="<?= $cantEstudEgres ?>"></div>
+                                    </div>
+                                </li>
+                            </ul>
+
                         <?php endforeach; ?>
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
             <!--</div>-->
@@ -113,16 +124,18 @@
                     </div>
                     <div class="card-body">
                         <?php
-                        if (isset($offersjobsLast)) {
+                        //print_r($offersjobsLast);
+                        if ($cantOffersjobs===0) {
                             echo '<p>No hay convocatorias recientes</p>';
                         } else {
+                            
                         }
                         ?>
                         <div class="container-fluid">
                             <?php foreach ($offersjobsLast as $itemjob) : ?>
-                                <div class="row ticket-card mt-3 pb-2 border-top border-bottom pb-3 mb-3">
+                                <div class="row ticket-card mt-0 pb-2 border-bottom pb-3 mb-3">
                                     <div class="ticket-details col-md-10">
-                                        <p class="text-dark font-weight-semibold mr-2 mt-4 mb-0 "><i class="fa fa-graduation-cap" style="height: 20px; width: 20px; text-align: center;"></i>
+                                        <p class="text-dark font-weight-semibold mr-2 mt-1 mb-0 "><i class="fa fa-graduation-cap" style="height: 20px; width: 20px; text-align: center;"></i>
                                             <span>&nbsp;<?= $itemjob->career_title ?></span>
                                         </p>
                                         <p class="text-primary mr-1 mb-0"><i class="fa fa-book" style="height: 20px; width: 20px; text-align: center;"></i>&nbsp; [Cód. <?= str_pad($itemjob->id, 6, '0', STR_PAD_LEFT) ?> ]</span>&nbsp;<?= $itemjob->title . ' <br>' . substr(htmlspecialchars_decode($itemjob->detail), 0, 100)  ?></p>

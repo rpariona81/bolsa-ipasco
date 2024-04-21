@@ -28,21 +28,21 @@
 
         .navbar {
             color: #fff;
-            background: #36385a !important;
+            /*background: #36385a !important;*/
             padding: 5px 16px;
             border-radius: 0;
             border: none;
             box-shadow: 0 0 4px rgba(0, 0, 0, .1);
         }
 
-        .navbar img {
+        /*.navbar img {
             border-radius: 50%;
             width: 36px;
             height: 36px;
             margin-right: 10px;
-        }
+        }*/
 
-        .navbar .navbar-brand {
+        /*.navbar .navbar-brand {
             color: #efe5ff;
             padding-left: 0;
             padding-right: 50px;
@@ -57,7 +57,7 @@
         .navbar .navbar-brand i {
             font-size: 25px;
             margin-right: 5px;
-        }
+        }*/
 
         .search-box {
             position: relative;
@@ -247,48 +247,70 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-        <div class="container">
+    <!--    <nav class="navbar navbar-expand-xl navbar-dark bg-primary">-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top shadow-5-strong">
+
+        <div class="container d-flex">
             <a href="#" class="navbar-brand">
-                <?= getenv('APP_NAME') ? getenv('APP_NAME') : 'Bolsa Laboral' ?>
+                <img class="img" src="<?= base_url('dist/img/avatars/IESTPPasco.png') ?>" height="40"/>
+                <!--< ?= getenv('APP_NAME') ? getenv('APP_NAME') : 'Bolsa Laboral' ?>-->
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>-->
+
             <!-- Collection of nav links, forms, and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
                 <div class="navbar-nav ml-auto mx-auto">
-                    <a href="<?= base_url('/users') ?>" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Convocatorias</span></a>
+                    <a href="<?= base_url('/users') ?>" class="nav-item nav-link active"><i class="fa fa-home"></i><strong>Convocatorias</strong></a>
                     <?php
                     if ($this->session->userdata('user_rol') == 'estudiante') {
-                        echo '<a class="nav-item nav-link" aria-current="page" href="' . base_url('/users/postulaciones') . '">';
+                        echo '<a class="nav-item nav-link active" href="' . base_url('/users/postulaciones') . '">';
                         echo '   <i class="fa fa-check-square"></i>';
-                        echo '    <span>Mis postulaciones</span>';
+                        echo '    <strong>Mis postulaciones</strong>';
                         echo '</a>';
 
-                        echo '<a class="nav-item nav-link" href="' . base_url('/users/perfil') . '">';
+                        echo '<a class="nav-item nav-link active" href="' . base_url('/users/perfil') . '">';
                         echo '    <i class="fa fa-id-badge"></i>';
-                        echo '    <span>Mi perfil</span></a>';
+                        echo '    <strong>Mi perfil</strong></a>';
 
-                        echo '<a class="nav-item nav-link" href="' . base_url('/users/descarga_cv') . '">';
+                        echo '<a class="nav-item nav-link active" href="' . base_url('/users/descarga_cv') . '">';
                         echo '    <i class="fa fa-file"></i>';
-                        echo '    <span>Modelo CV</span></a>';
+                        echo '    <strong>Modelo CV</strong></a>';
                     } else {
                     }
                     ?>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action text-white">
-                        <i class="fa fa-user fa-fw"></i>
+                    <a href="#" data-toggle="dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action text-white">
+                        <i class="fa fa-user fa-fw align-top"></i>
                         <?= $this->session->userdata('user_rol_title') . ' ' . $this->session->userdata('user_name') . ' ' . $this->session->userdata('user_paterno') ?>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <a href="<?= base_url('/users/credenciales') ?>" class="dropdown-item"><i class="fa fa-user-o"></i> Cambiar clave</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a href="<?= base_url('/users/credenciales') ?>" class="dropdown-item"><i class="fa fa-key"></i> Cambiar clave</a>
                         <div class="divider dropdown-divider"></div>
                         <a href="<?= base_url('/logout') ?>" class="dropdown-item"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
                     </div>
                 </div>
+                <!--<ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>-->
             </div>
         </div>
         </div>

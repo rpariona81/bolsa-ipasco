@@ -144,20 +144,27 @@
                     <ul class="navbar-nav navbar-align">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="user"></i>
-                            </a>
-
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                            <!--<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                            <a class="nav-icon pe-md-0 dropdown-toggle show" href="#" data-bs-toggle="dropdown" aria-expanded="true">-->
+                            <!--<i class="align-middle" data-feather="user"></i>-->
+                            <!--</a>-->
+                            <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="align-top" data-feather="user"></i>
                                 <span class="text-dark"><?= $this->session->userdata('user_rol_title') ?></span>
-
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end">
+
+                            <!--<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">-->
+                            <!--<a class="nav-icon pe-md-0 dropdown-toggle show" href="#" data-bs-toggle="dropdown">-->
+                            <!--<i class="align-top" data-feather="user"></i>-->
+                            <!-- ?= $this->session->userdata('user_rol_title') ?-->
+
+                            <!--</a>-->
+                            <!--<div class="dropdown-menu dropdown-menu-end">-->
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
                                 <a class="dropdown-item" href="<?= base_url('/admin/perfil') ?>"><i class="align-middle me-1" data-feather="settings"></i>&nbsp;Mi Perfil</a>
                                 <a class="dropdown-item" href="<?= base_url('/admin/claves') ?>"><i class="align-middle me-1" data-feather="link"></i>&nbsp;Cambiar contraseña</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?= base_url('/logout') ?>"><i class="align-middle me-1" data-feather="log-out"></i>&nbsp;Cerrar sesión/a>
+                                <a class="dropdown-item" href="<?= base_url('/logout') ?>"><i class="align-middle me-1" data-feather="log-out"></i>&nbsp;Cerrar sesión</a>
                             </div>
                         </li>
                     </ul>
