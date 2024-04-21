@@ -328,7 +328,7 @@ class AppController extends CI_Controller
 
     public function descargacv()
     {
-        redirect('/uploads/document/' . getenv('CV_NAME'), 'location', 301);
+        redirect(base_url('/uploads/document/' . getenv('CV_NAME')), 'location', 301);
     }
 }
 

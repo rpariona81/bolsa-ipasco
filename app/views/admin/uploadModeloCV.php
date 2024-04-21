@@ -6,7 +6,7 @@
         <?= my_validation_errors(validation_errors()); ?>
         <div class="card-body">
             <div class="col-12">
-                <h5>Descarga Modelo de CV: &nbsp;<a class="btn btn-outline-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Descargar CV" target="_blank" download="ModeloEjemplo.docx" href="<?= base_url('/uploads/document/ModeloEjemplo.docx'); ?>">
+                <h5>Descarga Modelo de CV: &nbsp;<a class="btn btn-outline-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Descargar CV" target="_blank" download="<?=getenv('CV_NAME')?>" href="<?= base_url('/uploads/document/'. getenv('CV_NAME')); ?>">
                         <i class="fa fa-file-word-o" title="ModeloCV.docx"></i></a></h5>
             </div>
             <hr>

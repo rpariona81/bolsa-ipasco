@@ -1005,14 +1005,14 @@ class AdminController extends CI_Controller
         if ($this->session->userdata('user_rol') == 'admin') {
             $config['upload_path']          = FCPATH . 'uploads/document/';
             $config['allowed_types']        = 'docx';
-            $config['max_size']             = 4096;
+            $config['max_size']             = 8192;
             $config['file_name']            = round(microtime(true) * 1000);
             $config['remove_spaces']        = TRUE;
             
             $this->load->library('upload', $config);
             $this->upload->overwrite = true;
             //print_r($_FILES);
-            print_r($this->upload->display_errors());
+            //print_r($this->upload->display_errors());
         }
             /*if (!$this->upload->do_upload('modelocv')) {
                 //$error = array('error' => $this->upload->display_errors());

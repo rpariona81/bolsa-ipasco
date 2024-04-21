@@ -118,11 +118,11 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="<?= base_url('/admin/vermodelocv') ?>">
+                    <!--<li class="sidebar-item">
+                        <a class="sidebar-link" href=" < ?= base_url('/admin/vermodelocv') ?>">
                             <i class="align-middle" data-feather="file"></i> <span class="align-middle">Modelo CV</span>
                         </a>
-                    </li>
+                    </li>-->
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="<?= base_url('/logout') ?>">
