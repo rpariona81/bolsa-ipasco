@@ -72,7 +72,7 @@
             <?= form_open('appcontroller/postular', array('enctype' => 'multipart/form-data')) ?>
             <div class="modal-header bg-dark">
                 <h5 class="modal-title text-white">Realizar postulación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                     <!--<span aria-hidden="true">&times;</span>-->
                 </button>
             </div>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 <input type='submit' class='btn btn-success' value='Confirmar postulación' id='btn_upload' disabled>
             </div>
             <?= form_close() ?>
