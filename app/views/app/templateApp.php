@@ -16,10 +16,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 
     <script src="<?= base_url('public/js/jquery-3.7.0.min.js') ?>"></script>
+    <script src="<?= base_url('public/js/bootstrap.min.js') ?>"></script>
+    <script src="<?= base_url('public/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('public/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('dist/datatables/datatables.min.js') ?>"></script>
 
-
+    <script src="<?= base_url('dist/datatables/pdfmake-0.2.7/pdfmake.min.js') ?>"></script>
+    <script src="<?= base_url('dist/datatables/pdfmake-0.2.7/vfs_fonts.js') ?>"></script>
+    <script src="<?= base_url('dist/datatables/JSZip-3.10.1/jszip.min.js') ?>"></script>
+    <script src="<?= base_url('dist/datatables/Buttons-2.4.1/js/buttons.bootstrap4.min.js') ?>"></script>
+    <script src="<?= base_url('dist/datatables/Buttons-2.4.1/js/dataTables.buttons.min.js') ?>"></script>
+    <script src="<?= base_url('dist/datatables/ColReorder-1.7.0/js/colReorder.bootstrap4.min.js') ?>"></script>
     <style>
         body {
             background: #eeeeee;
@@ -252,7 +259,7 @@
 
         <div class="container d-flex">
             <a href="#" class="navbar-brand">
-                <img class="img" src="<?= base_url('dist/img/avatars/IESTPPasco.png') ?>" height="40"/>
+                <img class="img" src="<?= base_url('dist/img/avatars/IESTPPasco.png') ?>" height="40" />
                 <!--< ?= getenv('APP_NAME') ? getenv('APP_NAME') : 'Bolsa Laboral' ?>-->
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse">
@@ -342,14 +349,7 @@
             </div>
         </div>
     </footer>
-    <script src="<?= base_url('dist/js/datatables.js') ?>"></script>
 
-    <script src="<?= base_url('dist/datatables/pdfmake-0.2.7/pdfmake.min.js') ?>"></script>
-    <script src="<?= base_url('dist/datatables/pdfmake-0.2.7/vfs_fonts.js') ?>"></script>
-    <script src="<?= base_url('dist/datatables/JSZip-3.10.1/jszip.min.js') ?>"></script>
-    <script src="<?= base_url('dist/datatables/Buttons-2.4.1/js/buttons.bootstrap4.min.js') ?>"></script>
-    <script src="<?= base_url('dist/datatables/Buttons-2.4.1/js/dataTables.buttons.min.js') ?>"></script>
-    <script src="<?= base_url('dist/datatables/ColReorder-1.7.0/js/colReorder.bootstrap4.min.js') ?>"></script>
     <script>
         $(document).ready(function() {
             $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn btn-md btn-danger border-0';
@@ -386,8 +386,6 @@
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Corporate UI Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="<?= base_url('public/assets/js/corporate-ui-dashboard.min.js?v=1.0.0') ?>"></script>
 
 </body>
 

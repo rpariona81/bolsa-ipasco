@@ -35,9 +35,9 @@
             <?= $convocatoria->expired ?>
         </p>
         <div class="alert alert-secondary">
-            <small>Programa de estudios:
+            <strong>Programa de estudios:
                 <?= $convocatoria->career_title ?>
-            </small>
+            </strong>
         </div>
         <div class="col-12">
             <div class="float-end">
