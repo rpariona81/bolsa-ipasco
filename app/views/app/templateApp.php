@@ -327,7 +327,7 @@
   ============================-->
     <br />
     <main id="content_app">
-        <div class="container mt-3">
+        <div class="container" style="margin-bottom: 100px;">
             <?php $this->load->view($pagina); ?>
         </div>
     </main>

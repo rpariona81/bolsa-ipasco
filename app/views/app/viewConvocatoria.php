@@ -1,7 +1,7 @@
-<div class="card border shadow-xs mb-4">
-    <div class="card-header border-bottom pb-0">
+<div class="card border shadow-xs">
+    <div class="card-header border-bottom">
         <h5 class="card-title">
-            <?= $convocatoria->title ?>
+            <strong class="text-dark"><?= $convocatoria->title ?></strong>
         </h5>
         <h5>
             <font color="red"><em>
@@ -41,7 +41,7 @@
         </div>
         <div class="col-12">
             <div class="float-end">
-                <a class="btn btn-warning btn-lg" href="<?=base_url('/users')?>">Regresar</a>
+                <a class="btn btn-warning btn-lg" href="<?= base_url('/users') ?>">Regresar</a>
                 <?php
                 if ($this->session->userdata('user_rol') == 'estudiante') {
                     if ($checkPostulation) {
